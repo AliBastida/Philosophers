@@ -11,11 +11,11 @@
 # **************************************************************************** #
 
 NAME := philo
-SRC := *.c
+SRC := philo.c prueba.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc
-CFLAGS := -Wall -Werror -Wextra -g -MMD  -pthread -I inc/
+CFLAGS := -Wall -Werror -Wextra -g -MMD  -pthread
 RM := rm -rf
 LIBS := -lpthread 
 HEADER := inc/

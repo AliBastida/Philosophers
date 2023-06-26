@@ -18,8 +18,10 @@
 #include <unistd.h>
 #include <pthread.h>
 
+//philo.c //
+int main(int ac, char **av);
 
-
-
-
+//prueba.c//
+void *routine();
+void *prueba();
 #endif
