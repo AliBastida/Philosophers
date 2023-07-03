@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/06/23 17:42:15 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/03 09:49:33 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 
 //philo.c //
 int main(int ac, char **av);
-
+int	ft_error(int n);
+int check_errors(int ac, char **av);
 //prueba.c//
 void *routine();
 void *prueba();
