@@ -6,12 +6,12 @@
 #    By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/23 17:42:30 by abastida          #+#    #+#              #
-#    Updated: 2023/06/23 17:47:56 by abastida         ###   ########.fr        #
+#    Updated: 2023/07/04 10:00:03 by abastida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := philo
-SRC := philo.c prueba.c
+SRC := philo.c create.c utils.c prueba.c check_error.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc
