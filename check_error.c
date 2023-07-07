@@ -33,10 +33,14 @@ int check_errors(int ac, char **av)
 		ft_error (2);
 		return(2);
 	}
-	if (av[1][0] == '0')
+	while (av[i])
 	{
-		ft_error(2);
-		return (2);
+		if (av[i][0] == '0')
+		{
+			ft_error(2);
+			return (2);
+		}
+		i++;
 	}
 	while (av[i])
 	{
