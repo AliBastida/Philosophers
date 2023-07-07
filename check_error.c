@@ -35,7 +35,7 @@ int check_errors(int ac, char **av)
 	}
 	while (av[i])
 	{
-		if (av[i][0] == '0')
+		if (av[i][0] == '0' && !av[i][1])
 		{
 			ft_error(2);
 			return (2);
