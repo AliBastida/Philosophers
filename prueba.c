@@ -3,13 +3,13 @@
 void *routine()
 {
 	printf("test\n");
-	sleep(3);
+	sleep(2);
 	return (0);
 }
 
 void *prueba()
 {
 	printf("otra prueba\n");
-	sleep(3);
+	sleep(2);
 	return (0);
 }

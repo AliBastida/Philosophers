@@ -14,14 +14,17 @@
 
 int main(int ac, char **av)
 {
-	if (check_errors(ac, av) == 0)
-	{
-		pthread_t t1, t2;
-		pthread_create(&t1, NULL, &routine, NULL);
-		pthread_create(&t2, NULL, &prueba, NULL);
-		pthread_join(t1, NULL);
-		pthread_join(t2, NULL);
-	}
+	t_data *data = NULL;
+	data = (t_data *)malloc(sizeof(t_data));
+	if (check_errors(ac, av) != 0)
+		return (-1);
+	if (giving_data(data, av) != 0)
+		return (-1);
+	ft_create_thread(data);
+		//pthread_create(&t1, NULL, &routine, NULL);
+		//pthread_create(&t2, NULL, &prueba, NULL);
+		//pthread_join(t1, NULL);
+		//pthread_join(t2, NULL);
 	return(0);
 }
 

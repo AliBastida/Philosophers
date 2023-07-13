@@ -48,6 +48,7 @@ int check_errors(int ac, char **av);
 
 //create.c//
 int giving_data(t_data *data, char **av);
+int ft_create_thread(t_data *data);
 
 //utils.c//
 int ft_atoi(char *str);
