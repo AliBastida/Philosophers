@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 10:07:10 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/04 10:07:12 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:11:55 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int check_errors(int ac, char **av)
 		}
 		i++;
 	}
+	i = 1;
 	while (av[i])
 	{
 		j = 0;

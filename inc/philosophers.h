@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philosophers.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abastida <abastida@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/04 10:00:21 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:11:48 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/time.h>
 #include <pthread.h>
 
 typedef struct s_philo
@@ -30,6 +31,7 @@ typedef struct s_philo
 typedef struct s_data
 {
 	int philos_num;
+	pthread_mutex_t	*fork;
 	int time_to_eat;
 	int time_to_die;
 	int time_sleep;
@@ -48,7 +50,7 @@ int check_errors(int ac, char **av);
 
 //create.c//
 int giving_data(t_data *data, char **av);
-int ft_create_thread(t_data *data);
+int ft_create_thread(t_data *data, t_philo *philos);
 
 //utils.c//
 int ft_atoi(char *str);
