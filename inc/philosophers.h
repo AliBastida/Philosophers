@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/17 18:11:48 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/20 13:11:37 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 #include <sys/time.h>
 #include <pthread.h>
 
+typedef struct s_data	t_data;
+
 typedef struct s_philo
 {
 	int num_philo;
 	int fork_left;
-	int fork_rigth;
+	int fork_right;
 	struct t_data *data;
 
 }t_philo;
@@ -36,6 +38,7 @@ typedef struct s_data
 	int time_to_die;
 	int time_sleep;
 	int number_of_times_each_philosopher_must_eat;
+	struct t_philo *philo;
 
 }t_data;
 
@@ -55,6 +58,10 @@ int ft_create_thread(t_data *data, t_philo *philos);
 //utils.c//
 int ft_atoi(char *str);
 
+//data_philo.c//
+t_philo *create_philo(t_data *data);
+
+//time_control.c//
 
 
 
@@ -63,5 +70,5 @@ int ft_atoi(char *str);
 
 //prueba.c//
 void *routine();
-void *prueba();
+void *prueba(void *arg);
 #endif

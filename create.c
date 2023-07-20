@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 09:40:41 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/17 18:11:52 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/20 13:03:10 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int giving_data(t_data *data, char **av)
 
 	data->fork = (pthread_mutex_t *)malloc (sizeof(pthread_mutex_t) * data->philos_num);
 	if (!data->fork)
-		return(NULL);
+		return(-1);
 	while (i < data->philos_num)
 	{
 		if (pthread_mutex_init(&data->fork[i], NULL) != 0)
@@ -46,11 +46,13 @@ int ft_create_thread(t_data *data, t_philo *philos) // array philo tambien
 		return (0);
 	while (data->philos_num > count_threads)
 	{
+		pthread_mutex_lock(&data->fork[count_threads]);
 		if (pthread_create(&threads[count_threads], NULL, &prueba, &philos[count_threads]) != 0)
 		{
 			printf("Threads can't be created\n");
 			return (-1);
 		}
+		pthread_mutex_unlock(&data->fork[count_threads]);
 		count_threads++;
 	}
 	count_threads = 0;
