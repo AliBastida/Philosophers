@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/20 13:11:37 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/22 11:13:48 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ typedef struct s_data
 
 }t_data;
 
-
-
 //philo.c //
 int main(int ac, char **av);
 
@@ -63,10 +61,9 @@ t_philo *create_philo(t_data *data);
 
 //time_control.c//
 
-
-
-
-
+long long time_dif(long long current, long long past);
+long long get_time(void);
+void ft_sleep(long long time);
 
 //prueba.c//
 void *routine();

@@ -13,6 +13,6 @@ void *prueba(void *arg)
 	printf("philo %d\n", philo->num_philo);
 	printf("fork_left %d\n", philo->fork_left);
 	printf("fork_right %d\n", philo->fork_right);
-	sleep(2);
+	sleep(1);
 	return (0);
 }

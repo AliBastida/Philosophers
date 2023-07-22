@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 11:25:32 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/20 13:15:22 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/22 11:02:30 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ t_philo *create_philo(t_data *data)
         return (NULL);
     
     while(count < data->philos_num)
-    {	pthread_mutex_lock(&data->fork[count]);
+    {
+        pthread_mutex_lock(&data->fork[count]);
         philo[count].num_philo = count;
         philo[count].fork_left = count - 1;
         if (count == 0)
