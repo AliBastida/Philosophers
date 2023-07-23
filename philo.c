@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 15:38:25 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/22 10:47:03 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/23 16:54:07 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int main(int ac, char **av)
 	if (!philo)
 		return (-1);
 	ft_create_thread(data, philo);
-	
 	return(0);
 }
 
