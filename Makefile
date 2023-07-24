@@ -6,17 +6,17 @@
 #    By: abastida <abastida@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/23 17:42:30 by abastida          #+#    #+#              #
-#    Updated: 2023/07/23 16:58:45 by abastida         ###   ########.fr        #
+#    Updated: 2023/07/24 17:59:17 by abastida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := philo
 SRC := philo.c create.c utils.c prueba.c check_error.c data_philo.c \
-time_control.c print.c
+time_control.c print.c free_and_destroy.c
 OBJ := $(SRC:.c=.o)
 DEP := $(SRC:.c=.d)
 CC := gcc
-CFLAGS := -Wall -Werror -Wextra -g -MMD  -pthread
+CFLAGS := -Wall -Werror -Wextra -g -MMD -pthread
 RM := rm -rf
 LIBS := -lpthread 
 HEADER := inc/
