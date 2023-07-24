@@ -12,10 +12,10 @@
 
 #include "philosophers.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_data *data = NULL;
-	t_philo *philo;
+	t_data	*data;
+	t_philo	*philo;
 
 	data = (t_data *)malloc(sizeof(t_data));
 	if (check_errors(ac, av) != 0)
@@ -30,6 +30,5 @@ int main(int ac, char **av)
 	else
 		ft_create_thread(data, philo);
 	free_and_destroy(data, philo);
-	return(0);
+	return (0);
 }
-
