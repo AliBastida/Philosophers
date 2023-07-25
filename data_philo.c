@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 11:25:32 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/24 16:34:26 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:28:43 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,25 @@ int	giving_data(t_data *data, char **av)
 	data -> time_to_eat = ft_atoi(av[3]);
 	data -> time_sleep = ft_atoi(av[4]);
 	if (av[5])
-		data -> number_of_times_each_philosopher_must_eat = ft_atoi(av[5]);
+		data -> must_eat = ft_atoi(av[5]);
 	else
-		data -> number_of_times_each_philosopher_must_eat = -1;
+		data -> must_eat = -1;
 	data ->fork = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) 
 			* data->philos_num);
 	if (!data->fork)
 		return (-1);
 	return (init_mutex(data));
+}
+
+void	*if_only_one_philo(void *arg)
+{
+	t_philo	*philo;
+
+	philo = (t_philo *)arg;
+	pthread_mutex_lock(&philo->data->fork[philo->fork_right]);
+	printing(2, philo);
+	ft_sleep(philo->data->time_to_die);
+	printf(BRED"%lld Philo has died 💀\n"RESET, 
+		(get_time() - philo->data->start_time));
+	return (NULL);
 }
