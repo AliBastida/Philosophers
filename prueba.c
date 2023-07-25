@@ -48,7 +48,7 @@ void *check_philo(void *arg)
 			{
 				pthread_mutex_lock(&philo->data->print);
 				philo->data->someone_died = 1;
-				printf("%lld Philo %d has died\n", (get_time() - philo->data->start_time), (i + 1));
+				printf(BRED"%lld Philo %d has died 💀\n"RESET, (get_time() - philo->data->start_time), (i + 1));
 				pthread_mutex_unlock(&philo->data->print);
 				break ;
 			}

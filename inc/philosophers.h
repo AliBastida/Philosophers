@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/24 17:03:48 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/25 12:58:31 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <pthread.h>
+#include "colors.h"
 
 typedef struct s_data
 {
@@ -49,6 +50,7 @@ int main(int ac, char **av);
 //check_error.c//
 int ft_error(int n);
 int check_errors(int ac, char **av);
+int is_digit(char **av);
 
 //create.c//
 int ft_create_thread(t_data *data, t_philo *philos);
@@ -74,6 +76,7 @@ void *if_only_one_philo(void *arg);
 
 //print.c//
 void printing(int n, t_philo *philo);
+void continue_printing(int n, t_philo *philo);
 
 //free_and_destroy.c
 int free_and_destroy(t_data *data, t_philo *philo);
