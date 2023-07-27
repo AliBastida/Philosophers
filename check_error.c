@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 10:07:10 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/26 12:29:33 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/27 13:02:46 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_error(int n)
 		return (1);
 	if (n == 2)
 	{
-		printf("Wrong parametres");
+		printf("Wrong parameters\n");
 		return (2);
 	}
 	return (0);

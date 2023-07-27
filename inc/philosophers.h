@@ -6,7 +6,7 @@
 /*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 17:40:30 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/25 16:28:43 by abastida         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:48:48 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ int			is_digit(char **av);
 
 //create.c//
 int			ft_create_thread(t_data *data, t_philo *philos);
-int			init_mutex(t_data *philo);
-int			create_one_philo(t_philo *philo);
+int			init_mutex(t_data *data);
+int			create_one_philo(t_data *data, t_philo *philo);
 
 //utils.c//
 int			ft_atoi(char *str);
@@ -81,6 +81,6 @@ void		printing(int n, t_philo *philo);
 void		continue_printing(int n, t_philo *philo);
 
 //free_and_destroy.c
-int			free_and_destroy(t_data *data, t_philo *philo);
+int			free_and_destroy(t_data *data, t_philo *philo, int out);
 
 #endif
