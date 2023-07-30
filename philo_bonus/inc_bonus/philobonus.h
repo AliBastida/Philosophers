@@ -6,7 +6,7 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 12:04:33 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/28 17:30:37 by ali              ###   ########.fr       */
+/*   Updated: 2023/07/30 17:05:05 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <pthread.h>
 # include "colors_bonus.h"
 # include <semaphore.h>
+# include <signal.h>
 
 typedef struct s_data
 {
@@ -70,6 +71,7 @@ int 		giving_data(t_data *data, char **av);
 t_philo *data_philo(t_data *data);
 int create_philo(t_philo *philo, t_data *data);
 int init_sem(t_data *data);
+void ft_exit(t_data *data, t_philo *philo);
 
 //print.c
 void	printing(int n, t_philo *philo);
@@ -77,6 +79,6 @@ void	continue_printing(int n, t_philo *philo);
 
 //routine.c
 int *one_philo(t_philo *philo);
-int	create_one_philo(t_philo *philo);
+void *check_death(t_philo *philo);
 
 #endif

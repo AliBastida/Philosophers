@@ -6,7 +6,7 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 12:09:10 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/28 16:43:16 by ali              ###   ########.fr       */
+/*   Updated: 2023/07/29 09:16:18 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int main(int ac, char **av)
 	if (!philo)
 		return (-1);
 	create_philo(philo, data);
-
 	return (0);
 }

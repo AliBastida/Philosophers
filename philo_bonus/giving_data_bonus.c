@@ -6,7 +6,7 @@
 /*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 12:36:18 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/28 17:23:07 by ali              ###   ########.fr       */
+/*   Updated: 2023/07/30 16:54:50 by ali              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int giving_data(t_data *data, char **av)
 {
-	data->someone_died = 0;
+	data->someone_died = 1;
 	data->start_time = get_time();
 	data->philos_num = ft_atoi(av[1]);
 	
