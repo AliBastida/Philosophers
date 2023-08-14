@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ali <ali@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: abastida <abastida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 19:36:16 by abastida          #+#    #+#             */
-/*   Updated: 2023/07/28 17:59:57 by ali              ###   ########.fr       */
+/*   Updated: 2023/08/14 15:05:50 by abastida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	printing(int n, t_philo *philo)
 {
-	if (philo->data->someone_died == 1)
+	if (philo->data->someone_died == 0)
 	{
 	sem_wait(philo->data->print);
 		return ;
@@ -41,7 +41,7 @@ void	printing(int n, t_philo *philo)
 void	continue_printing(int n, t_philo *philo)
 {
 	sem_wait(philo-> data-> print);
-	if (philo-> data-> someone_died == 1)
+	if (philo-> data-> someone_died == 0)
 	{
 		sem_post(philo-> data-> print);
 		return ;
